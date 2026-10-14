@@ -1,3 +1,47 @@
+# Interactive Registration Form
+
+A registration form that checks each field as you type, and again when you press Register. A successful registration shows an alert, then the form is cleared. The values are saved in the browser and filled back in on the next visit.
+
+## Screenshots
+
+**Empty form.** Required fields start with a red border. The password rules sit under that field.
+
+![Empty registration form with red borders on the required fields](docs/screenshots/empty-form.png)
+
+**Validation.** Messages appear as you type. An empty username, an email without an @ sign, a password that misses the rules, and a confirm password that does not match.
+
+![Registration form showing an error under each field](docs/screenshots/validation-errors.png)
+
+**Ready to register.** The username is maya and the email is maya@example.com. The password meets the rules, so the error messages are gone.
+
+![Completed registration form with no error messages](docs/screenshots/valid-form.png)
+
+## What the form checks
+
+- Username is required. An empty username says “Please enter a valid username.”
+- Email must be a valid email address. Otherwise it says “Please enter a valid email address.”
+- Password must be at least 8 characters and include an uppercase letter, a lowercase letter, and a number. Otherwise it says “Password Invalid. Check password requirements.”
+- While you type the confirm password, a mismatch says “Passwords do not match.”
+- On Register, a mismatch or an empty confirm password says “Passwords do not match or is empty.”
+
+The form turns off the browser’s own validation popup. The script checks each field and writes these messages.
+
+## After Register
+
+If every field is valid and the passwords match, an alert says “The form data is valid and has been submitted successfully!” The form then clears.
+
+Username, email, password, and confirm password are saved in the browser. The next time the page loads, those values are filled back in. The password is stored as plain text.
+
+## Open it
+
+Open `index.html` in a browser.
+
+## Built with
+
+- HTML
+- CSS
+- JavaScript
+
 # Reflection Questions
 ## By Mamadou Moussa Balde
 Include your answers to the following questions in your submission, within the README.md file:
